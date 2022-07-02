@@ -6,7 +6,8 @@ git clone https://github.com/Tdrj2716/study_app_hackathon.git
 cd study_app_hackathon
 ```
 
-プロジェクトを適宜VSCode, Android Studioから開けて、開発を行なってください
+- プロジェクトを適宜VSCode, Android Studioから開けて、実行できるかを確認ください
+- 作業する場合は`develop`ブランチから`feature/xxx`のような感じでブランチを切って、pushしたものをPull Requestとして送ってください
 
 ## Getting Started
 
