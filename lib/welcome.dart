@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+
 class Welcome extends StatelessWidget {
   //const MyApp({Key? key}) : super(key: key);
   @override
@@ -18,7 +20,9 @@ class Welcome extends StatelessWidget {
               primary: Colors.orange,
               onPrimary: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, LogIn.id);
+            },
           ),
           ElevatedButton(
             child: const Text('参加者'),
