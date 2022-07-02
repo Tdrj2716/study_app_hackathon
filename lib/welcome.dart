@@ -5,14 +5,25 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("ホーム"),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(250),
+        child: AppBar(
+            //title: Text("ホーム"),
+            backgroundColor: Color.fromRGBO(130, 130, 170, 1),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+                bottom: Radius.circular(48.0),
+              ),
+            )),
       ),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('選択してください'),
+          const Text(
+            '選択してください',
+            style: TextStyle(color: Color.fromRGBO(130, 120, 100, 1)),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
