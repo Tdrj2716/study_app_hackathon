@@ -1,6 +1,12 @@
-# project
+# How to start (for contributors)
 
-A new Flutter project.
+次のコマンドからプロジェクトをgit cloneしてください
+```
+git clone https://github.com/Tdrj2716/study_app_hackathon.git
+cd study_app_hackathon
+```
+
+プロジェクトを適宜VSCode, Android Studioから開けて、開発を行なってください
 
 ## Getting Started
 
