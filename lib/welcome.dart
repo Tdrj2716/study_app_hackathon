@@ -12,22 +12,28 @@ class Welcome extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ElevatedButton(
-            child: const Text('主催者'),
-            style: ElevatedButton.styleFrom(
-              primary: Colors.orange,
-              onPrimary: Colors.white,
-            ),
-            onPressed: () {},
-          ),
-          ElevatedButton(
-            child: const Text('参加者'),
-            style: ElevatedButton.styleFrom(
-              primary: Colors.orange,
-              onPrimary: Colors.white,
-            ),
-            onPressed: () {},
-          ),
+          Text('選択してください'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                child: const Text('ルームを作る'),
+                style: ElevatedButton.styleFrom(
+                  primary: Color.fromRGBO(0, 220, 230, 1),
+                  onPrimary: Color.fromRGBO(130, 120, 100, 1),
+                ),
+                onPressed: () {},
+              ),
+              ElevatedButton(
+                child: const Text('ルームに入る'),
+                style: ElevatedButton.styleFrom(
+                  primary: Color.fromRGBO(0, 220, 230, 1),
+                  onPrimary: Color.fromRGBO(130, 120, 100, 1),
+                ),
+                onPressed: () {},
+              ),
+            ],
+          )
         ],
       )),
     );
