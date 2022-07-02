@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+
 class Welcome extends StatelessWidget {
   //const MyApp({Key? key}) : super(key: key);
   @override
@@ -20,10 +22,7 @@ class Welcome extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            '選択してください',
-            style: TextStyle(color: Color.fromRGBO(130, 120, 100, 1)),
-          ),
+          Text('選択してください'),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
