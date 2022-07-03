@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'login.dart';
+import 'video.dart';
 
 class Welcome extends StatelessWidget {
   //const MyApp({Key? key}) : super(key: key);
@@ -38,7 +39,8 @@ class Welcome extends StatelessWidget {
                   primary: Color(0xFFD1EEF3),
                   onPrimary: Color(0xFF696636),
                 ),
-                onPressed: () {},
+                onPressed: () { Navigator.pushNamed(context, Video.id);
+                },
                 child: const Text('ルームを作る'),
               ),
               ElevatedButton(
