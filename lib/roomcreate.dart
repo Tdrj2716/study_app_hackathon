@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project/roomcreate.dart';
 
-class LogIn extends StatelessWidget {
-  static String id = "login";
+class RoomCreate extends StatelessWidget {
+  static String id = "roomcreate";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,13 +25,14 @@ class LogIn extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       alignment: Alignment.topCenter,
-                      child: Text('入力してください'),
                     ),
-                    _textField('時間　　例：12:00~14:00'),
-                    _textField('休憩時間　　例：30'),
-                    _textField('名前:'),
-                    _textField('目標:'),
-
+                    _textField('ルームID'),
+                    _textField('パスワード'),
+                    IconButton(
+                      icon: Icon(Icons.share),
+                      // シェアボタンをクリックしたときに呼ばれる処理
+                      onPressed: () {}
+                    ),
 
 
                   ],
@@ -42,7 +42,7 @@ class LogIn extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   padding: const EdgeInsets.only(top:30,bottom:0),
                   child: ElevatedButton(
-                      child: Text('               ルーム作成する               ',
+                      child: Text('               参加する               ',
                         style: TextStyle(
                           color: Color(0xFF693636),
                           fontSize: 20,
@@ -56,7 +56,6 @@ class LogIn extends StatelessWidget {
 
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, RoomCreate.id);
                       })
               ),
             ],
