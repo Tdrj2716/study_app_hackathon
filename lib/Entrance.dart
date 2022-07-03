@@ -67,7 +67,7 @@ class _EntranceState extends State<Entrance> {
 
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, video.id);
+                        Navigator.pushNamed(context, Video.id);
                       })
               ),
             ],
