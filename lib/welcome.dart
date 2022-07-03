@@ -11,7 +11,7 @@ class Welcome extends StatelessWidget {
         preferredSize: Size.fromHeight(250),
         child: AppBar(
             //title: Text("ホーム"),
-            backgroundColor: Color.fromRGBO(130, 130, 170, 1),
+            backgroundColor: Color.fromRGBO(0, 220, 230, 1),
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(48.0),
