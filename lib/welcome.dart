@@ -1,55 +1,54 @@
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+import 'video.dart';
+
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const Expanded(flex: 2, child: _TopPortion()),
-          Expanded(
-            flex: 3,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Text(
-                    "選択してください",
-                    style: TextStyle(color: Color(0xFF693636)),
-                  ),
-                  const SizedBox(height: 16),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFFD1EEF3),
-                          onPrimary: Color(0xFF693636),
-                        ),
-                        onPressed: () {},
-                        child: const Text('ルームを作る'),
+        body: Column(children: [
+      const Expanded(flex: 2, child: _TopPortion()),
+      Expanded(
+          flex: 3,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Text(
+                  "選択してください",
+                  style: TextStyle(color: Color(0xFF693636)),
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xFFD1EEF3),
+                        onPrimary: Color(0xFF696636),
                       ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: const Color(0xFFD1EEF3),
-                          onPrimary: const Color(0xFF693636),
-                        ),
-                        onPressed: () {},
-                        child: const Text('ルームに入る'),
+                      onPressed: () {
+                        Navigator.pushNamed(context, Video.id);
+                      },
+                      child: const Text('ルームを作る'),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: const Color(0xFFD1EEF3),
+                        onPrimary: const Color(0xFF696636),
                       ),
-                    ],
-                  ),
-                  //const SizedBox(height: 16),
-                  //const _ProfileInfoRow()
-                ],
-              ),
+                      onPressed: () {},
+                      child: const Text('ルームに入る'),
+                    ),
+                  ],
+                )
+              ],
             ),
-          ),
-        ],
-      ),
-    );
+          ))
+    ]));
   }
 }
 
