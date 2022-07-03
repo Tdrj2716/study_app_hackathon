@@ -16,12 +16,12 @@ class _EntranceState extends State<Entrance> {
       body: SingleChildScrollView(
         reverse: true,
         child: Container(
-          padding: const EdgeInsets.only(left:20,right:20,bottom:100),
+          padding: const EdgeInsets.only(left:20,right:20,bottom:0,top:30),
           color: Colors.white,
           child: Column(
             children: [
               Container(
-                padding: const EdgeInsets.only(top:50,bottom:60),
+                padding: const EdgeInsets.only(top:50,bottom:70),
                 decoration: BoxDecoration(
                   color: Color(0xFFD1EEF3),
                   borderRadius: BorderRadius.circular(10),
@@ -32,7 +32,12 @@ class _EntranceState extends State<Entrance> {
                   children: <Widget>[
                     Container(
                       alignment: Alignment.topCenter,
-                      child: Text('入力してください'),
+                      child: Text('入力してください',
+                        style: TextStyle(
+                          color: Color(0xFF693636),
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                     _textField('ルームID:'),
                     _textField('パスワード:'),
@@ -46,12 +51,20 @@ class _EntranceState extends State<Entrance> {
               ),
               Container(
                   alignment: Alignment.bottomCenter,
+                  padding: const EdgeInsets.only(top:30,bottom:0),
                   child: ElevatedButton(
-                      child: Text('参加'),
+                      child: Text('               参加する               ',
+                        style: TextStyle(
+                        color: Color(0xFF693636),
+                        fontSize: 20,
+                      ),
+                  ),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
+                          primary: Color(0xFFD1EEF3),
+
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, LogIn.id);

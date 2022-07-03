@@ -31,6 +31,7 @@ class Welcome extends StatelessWidget {
               primary: Colors.orange,
               onPrimary: Colors.white,
             ),
+
             onPressed: () {
               Navigator.pushNamed(context, Entrance.id);
             },
