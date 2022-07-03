@@ -3,6 +3,8 @@ import 'package:project/Entrance.dart';
 import 'package:project/welcome.dart';
 
 import 'login.dart';
+import 'video.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +35,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LogIn.id: (context) => LogIn(),
         Entrance.id: (context) => Entrance(),
+        Video.id: (context) => Video(),
       },
 
     );
