@@ -11,7 +11,7 @@ class Welcome extends StatelessWidget {
         preferredSize: Size.fromHeight(250),
         child: AppBar(
             //title: Text("ホーム"),
-            backgroundColor: Color.fromRGBO(0, 220, 230, 1),
+            backgroundColor: Color(0xFFD1EEF3),
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(48.0),
@@ -22,23 +22,26 @@ class Welcome extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('選択してください'),
+          const Text(
+            '選択してください',
+            style: TextStyle(color: Color(0xFF696636)),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
                 child: const Text('ルームを作る'),
                 style: ElevatedButton.styleFrom(
-                  primary: Color.fromRGBO(0, 220, 230, 1),
-                  onPrimary: Color.fromRGBO(130, 120, 100, 1),
+                  primary: Color(0xFFD1EEF3),
+                  onPrimary: Color(0xFF696636),
                 ),
                 onPressed: () {},
               ),
               ElevatedButton(
                 child: const Text('ルームに入る'),
                 style: ElevatedButton.styleFrom(
-                  primary: Color.fromRGBO(0, 220, 230, 1),
-                  onPrimary: Color.fromRGBO(130, 120, 100, 1),
+                  primary: Color(0xFFD1EEF3),
+                  onPrimary: Color(0xFF696636),
                 ),
                 onPressed: () {},
               ),
