@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
+import 'login.dart';　　
 
 class Entrance extends StatefulWidget {
   const Entrance({Key? key}) : super(key: key);
