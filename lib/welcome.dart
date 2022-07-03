@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/Entrance.dart';
 
 import 'login.dart';
 
@@ -30,7 +31,9 @@ class Welcome extends StatelessWidget {
               primary: Colors.orange,
               onPrimary: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Entrance.id);
+            },
           ),
         ],
       )),
