@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/NextPage.dart';
+
 
 class Entrance extends StatefulWidget {
   const Entrance({Key? key}) : super(key: key);
