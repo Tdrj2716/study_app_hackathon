@@ -53,7 +53,7 @@ class _EntranceState extends State<Entrance> {
                   alignment: Alignment.bottomCenter,
                   padding: const EdgeInsets.only(top:30,bottom:0),
                   child: ElevatedButton(
-                      child: Text('               参加する               ',
+                      child: Text('参加する',
                         style: TextStyle(
                         color: Color(0xFF693636),
                         fontSize: 20,
