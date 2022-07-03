@@ -1,68 +1,86 @@
 import 'package:flutter/material.dart';
+import '/NextPage.dart';
 
-class AuthPage extends StatefulWidget {
-  const AuthPage({Key? key}) : super(key: key);
-
+class Entrance extends StatefulWidget {
+  const Entrance({Key? key}) : super(key: key);
+  static String id = "entrance";
   @override
-  State<AuthPage> createState() => _AuthPageState();
+  State<Entrance> createState() => _EntranceState();
 }
 
-class _AuthPageState extends State<AuthPage> {
+class _EntranceState extends State<Entrance> {
   bool _isObscure = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text('参加者入力'),
         backgroundColor: Colors.blue,
       ),
-      body: Center(
+      body: SingleChildScrollView(
+        reverse: true,
         child: Container(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.all(1.0),
           child: Column(
+
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                   child: TextField(
                     decoration: InputDecoration(
+                        fillColor: Colors.lightBlue[200],
+                        filled: true,
                         border: OutlineInputBorder(),
-                        hintText: 'ルームIDを入力してください'
+                        hintText: 'ルームID:'
                     ),
                   )
               ),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                   child: TextField(
                     decoration: InputDecoration(
+                        fillColor: Colors.lightBlue[200],
+                        filled: true,
                         border: OutlineInputBorder(),
-                        hintText: 'パスワードを入力してください'
+                        hintText: 'パスワード:'
                     ),
                   )
               ),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                   child: TextField(
                     decoration: InputDecoration(
+                        fillColor: Colors.lightBlue[600],
+                        filled: true,
                         border: OutlineInputBorder(),
-                        hintText: '名前を入力してください'
+                        hintText: '名前:'
                     ),
                   )
               ),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                   child: TextField(
                     decoration: InputDecoration(
+                        fillColor: Colors.lightBlue[200],
+                        filled: true,
                         border: OutlineInputBorder(),
-                        hintText: '目標を入力してください'
+                        hintText: '目標:'
                     ),
                   )
               ),
-              Center(
+              Container(
+                alignment: Alignment.bottomCenter,
                 child: ElevatedButton(
-                    onPressed: (){},
-                    child: Text('ログイン')
+                    child: Text('参加'),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    onPressed: (){}
                 ),
               ),
             ],
@@ -72,4 +90,3 @@ class _AuthPageState extends State<AuthPage> {
     );
   }
 }
-

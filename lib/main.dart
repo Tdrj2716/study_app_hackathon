@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/Entrance.dart';
 import 'package:project/welcome.dart';
 
 import 'login.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       home: Welcome(),
       routes: {
         LogIn.id: (context) => LogIn(),
+        Entrance.id: (context) => Entrance(),
       },
 
     );
