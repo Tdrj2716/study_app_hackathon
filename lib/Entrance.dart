@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/NextPage.dart';
+import 'login.dart';
 
 class Entrance extends StatefulWidget {
   const Entrance({Key? key}) : super(key: key);
@@ -9,84 +9,71 @@ class Entrance extends StatefulWidget {
 }
 
 class _EntranceState extends State<Entrance> {
-  bool _isObscure = true;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text('参加者入力'),
-        backgroundColor: Colors.blue,
-      ),
       body: SingleChildScrollView(
         reverse: true,
         child: Container(
-          padding: const EdgeInsets.all(1.0),
+          padding: const EdgeInsets.only(left:20,right:20,bottom:100),
+          color: Colors.white,
           child: Column(
-
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: [
               Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        fillColor: Colors.lightBlue[200],
-                        filled: true,
-                        border: OutlineInputBorder(),
-                        hintText: 'ルームID:'
-                    ),
-                  )
-              ),
-              Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        fillColor: Colors.lightBlue[200],
-                        filled: true,
-                        border: OutlineInputBorder(),
-                        hintText: 'パスワード:'
-                    ),
-                  )
-              ),
-              Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        fillColor: Colors.lightBlue[600],
-                        filled: true,
-                        border: OutlineInputBorder(),
-                        hintText: '名前:'
-                    ),
-                  )
-              ),
-              Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        fillColor: Colors.lightBlue[200],
-                        filled: true,
-                        border: OutlineInputBorder(),
-                        hintText: '目標:'
-                    ),
-                  )
-              ),
-              Container(
-                alignment: Alignment.bottomCenter,
-                child: ElevatedButton(
-                    child: Text('参加'),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    onPressed: (){}
+                padding: const EdgeInsets.only(top:50,bottom:60),
+                decoration: BoxDecoration(
+                  color: Color(0xFFD1EEF3),
+                  borderRadius: BorderRadius.circular(10),
                 ),
+
+               child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      alignment: Alignment.topCenter,
+                      child: Text('入力してください'),
+                    ),
+                    _textField('ルームID:'),
+                    _textField('パスワード:'),
+                    _textField('名前:'),
+                    _textField('目標:'),
+
+
+
+                  ],
+               ),
+              ),
+              Container(
+                  alignment: Alignment.bottomCenter,
+                  child: ElevatedButton(
+                      child: Text('参加'),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, LogIn.id);
+                      })
               ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Widget _textField(String hintText) {
+    return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+        child: TextField(
+          decoration: InputDecoration(
+              fillColor: Colors.white,
+              filled: true,
+              border: OutlineInputBorder(),
+              hintText: hintText),
+        ));
+
   }
 }
