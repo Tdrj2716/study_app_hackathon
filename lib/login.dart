@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'components/button.dart';
+import 'components/palette.dart';
+
 class LogIn extends StatelessWidget {
   static String id = "login";
   @override
@@ -17,7 +20,7 @@ class LogIn extends StatelessWidget {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(16),
                     borderSide: const BorderSide(
-                      color: Colors.blue,
+                      color: kPrime2,
                       width: 2.0,
                     ),
                   ),
@@ -108,13 +111,20 @@ class LogIn extends StatelessWidget {
                   ),
                 ),
               ),
-              TextButton(
-                onPressed: () { /* ボタンが押せる時 */ },
-                style: TextButton.styleFrom(
-                  primary: Colors.blue,
-                ),
-                child: Text('ルーム作成'),
+              RoundedButton(
+                buttonColor: kPrime,
+                buttonTitle: "ルームを作成",
+                onPressed: () {},
               )
+              // ElevatedButton(
+              //   child: const Text('ルームを作成'),
+              //   style: ElevatedButton.styleFrom(
+              //     primary: Color.fromRGBO(0, 220, 230, 1),
+              //     onPrimary: Color.fromRGBO(130, 120, 100, 1),
+              //   ),
+              //   onPressed: () {},
+              // ),
+
             ],
           )),
     );
