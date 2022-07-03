@@ -4,6 +4,8 @@ import 'package:project/roomcreate.dart';
 import 'package:project/welcome.dart';
 
 import 'login.dart';
+import 'video.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
         LogIn.id: (context) => LogIn(),
         Entrance.id: (context) => Entrance(),
         RoomCreate.id: (context) => RoomCreate(),
+        Video.id: (context) => Video(),
       },
 
     );

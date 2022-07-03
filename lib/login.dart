@@ -10,17 +10,16 @@ class LogIn extends StatelessWidget {
       body: SingleChildScrollView(
         reverse: true,
         child: Container(
-          padding: const EdgeInsets.only(left:20,right:20,bottom:100),
+          padding: const EdgeInsets.only(left: 20, right: 20, bottom: 100),
           color: Colors.white,
           child: Column(
             children: [
               Container(
-                padding: const EdgeInsets.only(top:50,bottom:60),
+                padding: const EdgeInsets.only(top: 50, bottom: 60),
                 decoration: BoxDecoration(
                   color: Color(0xFFD1EEF3),
                   borderRadius: BorderRadius.circular(10),
                 ),
-
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -32,17 +31,16 @@ class LogIn extends StatelessWidget {
                     _textField('休憩時間　　例：30'),
                     _textField('名前:'),
                     _textField('目標:'),
-
-
-
                   ],
                 ),
               ),
               Container(
                   alignment: Alignment.bottomCenter,
-                  padding: const EdgeInsets.only(top:30,bottom:0),
+                  padding: const EdgeInsets.only(top: 30, bottom: 0),
                   child: ElevatedButton(
-                      child: Text('               ルーム作成する               ',
+                      child: Text(
+                        'ルーム作成する',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF693636),
                           fontSize: 20,
@@ -53,7 +51,6 @@ class LogIn extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         primary: Color(0xFFD1EEF3),
-
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, RoomCreate.id);
@@ -76,6 +73,5 @@ class LogIn extends StatelessWidget {
               border: OutlineInputBorder(),
               hintText: hintText),
         ));
-
   }
 }
