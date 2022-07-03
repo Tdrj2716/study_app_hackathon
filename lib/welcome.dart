@@ -17,7 +17,7 @@ class Welcome extends StatelessWidget {
                 children: [
                   Text(
                     "選択してください",
-                    style: TextStyle(color: Color(0xFF696636)),
+                    style: TextStyle(color: Color(0xFF693636)),
                   ),
                   const SizedBox(height: 16),
                   Row(
@@ -26,7 +26,7 @@ class Welcome extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           primary: Color(0xFFD1EEF3),
-                          onPrimary: Color(0xFF696636),
+                          onPrimary: Color(0xFF693636),
                         ),
                         onPressed: () {},
                         child: const Text('ルームを作る'),
@@ -34,7 +34,7 @@ class Welcome extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           primary: const Color(0xFFD1EEF3),
-                          onPrimary: const Color(0xFF696636),
+                          onPrimary: const Color(0xFF693636),
                         ),
                         onPressed: () {},
                         child: const Text('ルームに入る'),
@@ -118,6 +118,15 @@ class _TopPortion extends StatelessWidget {
       fit: StackFit.expand,
       children: [
         Container(
+          child: Center(
+              child: Text(
+            'みんスタ',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 50,
+              color: Color(0xFF693636),
+            ),
+          )),
           margin: const EdgeInsets.only(bottom: 50),
           decoration: const BoxDecoration(
               color: Color(0xFFD1EEF3),
