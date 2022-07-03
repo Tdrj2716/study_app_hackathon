@@ -8,10 +8,14 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(250),
+        preferredSize: const Size.fromHeight(250),
         child: AppBar(
-            //title: Text("ホーム"),
-            backgroundColor: Color(0xFFD1EEF3),
+            title: Image.asset(
+              'images/icon.png',
+              height: 60,
+              width: 60,
+            ),
+            backgroundColor: const Color(0xFFD1EEF3),
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(48.0),
@@ -30,20 +34,20 @@ class Welcome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
-                child: const Text('ルームを作る'),
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xFFD1EEF3),
                   onPrimary: Color(0xFF696636),
                 ),
                 onPressed: () {},
+                child: const Text('ルームを作る'),
               ),
               ElevatedButton(
-                child: const Text('ルームに入る'),
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xFFD1EEF3),
-                  onPrimary: Color(0xFF696636),
+                  primary: const Color(0xFFD1EEF3),
+                  onPrimary: const Color(0xFF696636),
                 ),
                 onPressed: () {},
+                child: const Text('ルームに入る'),
               ),
             ],
           )
