@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart';　　
+import 'video.dart';　　
 
 class Entrance extends StatefulWidget {
   const Entrance({Key? key}) : super(key: key);
@@ -67,7 +67,7 @@ class _EntranceState extends State<Entrance> {
 
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, LogIn.id);
+                        Navigator.pushNamed(context, video.id);
                       })
               ),
             ],
