@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project/roomcreate.dart';
 
-class LogIn extends StatelessWidget {
-  static String id = "login";
+class RoomCreate extends StatelessWidget {
+  static String id = "roomcreate";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,37 +9,40 @@ class LogIn extends StatelessWidget {
       body: SingleChildScrollView(
         reverse: true,
         child: Container(
-          padding: const EdgeInsets.only(left: 20, right: 20, bottom: 100),
+          padding: const EdgeInsets.only(left:20,right:20,bottom:100),
           color: Colors.white,
           child: Column(
             children: [
               Container(
-                padding: const EdgeInsets.only(top: 50, bottom: 60),
+                padding: const EdgeInsets.only(top:50,bottom:60),
                 decoration: BoxDecoration(
                   color: Color(0xFFD1EEF3),
                   borderRadius: BorderRadius.circular(10),
                 ),
+
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
                       alignment: Alignment.topCenter,
-                      child: Text('入力してください'),
                     ),
-                    _textField('時間　　例：12:00~14:00'),
-                    _textField('休憩時間　　例：30'),
-                    _textField('名前:'),
-                    _textField('目標:'),
+                    _textField('ルームID'),
+                    _textField('パスワード'),
+                    IconButton(
+                      icon: Icon(Icons.share),
+                      // シェアボタンをクリックしたときに呼ばれる処理
+                      onPressed: () {}
+                    ),
+
+
                   ],
                 ),
               ),
               Container(
                   alignment: Alignment.bottomCenter,
-                  padding: const EdgeInsets.only(top: 30, bottom: 0),
+                  padding: const EdgeInsets.only(top:30,bottom:0),
                   child: ElevatedButton(
-                      child: Text(
-                        'ルーム作成する',
-                        textAlign: TextAlign.center,
+                      child: Text('               参加する               ',
                         style: TextStyle(
                           color: Color(0xFF693636),
                           fontSize: 20,
@@ -51,9 +53,9 @@ class LogIn extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         primary: Color(0xFFD1EEF3),
+
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, RoomCreate.id);
                       })
               ),
             ],
@@ -73,5 +75,6 @@ class LogIn extends StatelessWidget {
               border: OutlineInputBorder(),
               hintText: hintText),
         ));
+
   }
 }

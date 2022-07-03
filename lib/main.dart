@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/Entrance.dart';
+import 'package:project/roomcreate.dart';
 import 'package:project/welcome.dart';
 
 import 'login.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LogIn.id: (context) => LogIn(),
         Entrance.id: (context) => Entrance(),
+        RoomCreate.id: (context) => RoomCreate(),
         Video.id: (context) => Video(),
       },
 
