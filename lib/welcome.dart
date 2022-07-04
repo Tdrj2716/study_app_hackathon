@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Entrance.dart';
 import 'login.dart';
 import 'video.dart';
 
@@ -31,7 +32,7 @@ class Welcome extends StatelessWidget {
                         onPrimary: Color(0xFF696636),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, Video.id);
+                        Navigator.pushNamed(context, LogIn.id);
                       },
                       child: const Text('ルームを作る'),
                     ),
@@ -40,7 +41,9 @@ class Welcome extends StatelessWidget {
                         primary: const Color(0xFFD1EEF3),
                         onPrimary: const Color(0xFF696636),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, Entrance.id);
+                      },
                       child: const Text('ルームに入る'),
                     ),
                   ],
